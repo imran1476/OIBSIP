@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | SecureDesk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dash" id="dash" hidden>
+  <header class="dash-top">
+    <div>
+      <p class="logo">SecureDesk</p>
+      <span class="eyebrow">Admin Panel</span>
+    </div>
+    <button class="btn secondary" type="button" id="logout-btn">Logout</button>
+  </header>
+
+  <main class="panel dashboard-panel">
+    <div class="dashboard-header">
+      <div>
+        <p class="kicker">Overview</p>
+        <h1 id="greeting">Welcome</h1>
+      </div>
+      <div class="status-pill">Online</div>
+    </div>
+
+    <p class="dashboard-text">You are logged in. This page is only visible with an active session.</p>
+
+    <section class="stats-grid" aria-label="Dashboard statistics">
+      <article class="stat-card">
+        <span class="stat-label">Projects</span>
+        <strong>24</strong>
+        <small>+6 this month</small>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Tasks</span>
+        <strong>118</strong>
+        <small>14 pending</small>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Revenue</span>
+        <strong>$18.4K</strong>
+        <small>+12.5%</small>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Users</span>
+        <strong>860</strong>
+        <small>+42 today</small>
+      </article>
+    </section>
+
+    <section class="quick-actions" aria-label="Quick actions">
+      <button type="button" class="action-btn primary">New Report</button>
+      <button type="button" class="action-btn">Export Data</button>
+      <button type="button" class="action-btn">Team Activity</button>
+      <button type="button" class="action-btn">Settings</button>
+    </section>
+
+    <section class="content-grid">
+      <div class="activity-box">
+        <h2>Recent Activity</h2>
+        <ul class="activity-list">
+          <li><span class="dot green"></span> New user registration approved</li>
+          <li><span class="dot blue"></span> Security audit completed successfully</li>
+          <li><span class="dot amber"></span> Payment report was generated</li>
+          <li><span class="dot purple"></span> Team weekly review scheduled</li>
+        </ul>
+      </div>
+
+      <div class="profile-box">
+        <h2>Account Details</h2>
+        <ul class="facts">
+          <li><span>Signed in as</span><span id="user-email"></span></li>
+          <li><span>Member since</span><span id="member-since"></span></li>
+          <li><span>Session</span><span>Active until you log out or close this tab</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>

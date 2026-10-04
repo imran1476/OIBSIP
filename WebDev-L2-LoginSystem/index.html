@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | SecureDesk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <p class="logo">SecureDesk</p>
+    <h2>Your workspace is waiting for you.</h2>
+    <p>Log in to open your private dashboard. Passwords are salted and hashed, never stored as plain text.</p>
+  </aside>
+  <main class="main">
+    <div class="card">
+      <h1>Log in</h1>
+      <p class="lead">Welcome back. Enter your details to continue.</p>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email">
+          <p class="error" id="email-error"></p>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input id="password" type="password" autocomplete="current-password">
+            <button type="button" class="toggle" data-target="password" aria-label="Show password">Show</button>
+          </div>
+          <p class="error" id="password-error"></p>
+        </div>
+        <button class="btn" type="submit" id="submit-btn">Login</button>
+      </form>
+      <p class="switch">New here? <a href="register.html">Create an account</a></p>
+    </div>
+  </main>
+</div>
+<script type="module" src="login.js"></script>
+</body>
+</html>
