@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <h1>Today's tasks</h1>
+
+  <div class="add-row">
+    <label class="sr-only" for="task-input">New task</label>
+    <input id="task-input" type="text" placeholder="What needs to get done?" maxlength="120" autocomplete="off">
+    <button id="add-btn" type="button">Add Task</button>
+  </div>
+  <p id="form-error" class="form-error" role="alert"></p>
+
+  <div class="lists">
+    <section class="panel" aria-labelledby="pending-title">
+      <div class="panel-head">
+        <h2 id="pending-title">Pending Tasks</h2>
+        <span class="count" id="pending-count">0 pending</span>
+      </div>
+      <ul id="pending-list" class="task-list"></ul>
+      <p id="pending-empty" class="empty">Nothing pending. Add a task above to get started.</p>
+    </section>
+
+    <section class="panel done" aria-labelledby="completed-title">
+      <div class="panel-head">
+        <h2 id="completed-title">Completed Tasks</h2>
+        <span class="count" id="completed-count">0 completed</span>
+      </div>
+      <ul id="completed-list" class="task-list"></ul>
+      <p id="completed-empty" class="empty">No completed tasks yet. Tick a task when it is done.</p>
+    </section>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
